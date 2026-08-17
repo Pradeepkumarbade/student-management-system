@@ -54,4 +54,10 @@ jobs:
 
     - name: status
       run: echo "Deploying Student Management System"
-   
+  
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      -name: deployment successfull
+       run: echo "Deploying Student Management System"
