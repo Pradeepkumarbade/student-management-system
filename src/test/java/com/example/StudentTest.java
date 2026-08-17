@@ -3,6 +3,8 @@ package com.example;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class StudentTest {
 
@@ -19,4 +21,14 @@ public class StudentTest {
 
         assertEquals(101, student.getId());
     }
+    @Test
+void testStudentObjectNotNull() {
+Student student = new Student(101, "Pradeep");
+assertNotNull(student);
+}
+@Test
+void testStudentNameNotEmpty() {
+Student student = new Student(101, "Pradeep");
+assertFalse(student.getName().isEmpty());
+}
 }
